@@ -1,0 +1,47 @@
+.landing-page{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url('../../../public/landingpage.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow: inset 0 0 5rem rgb(0 0 0 / 50%);
+}
+.content{
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.content h1{
+    font-size:3rem;
+    color:#ffff;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+.content p{
+    font-size:2rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color:#ffff;
+    text-align: center;
+}
+.content button{
+    color: #333;
+    background-color: #fff;
+    font-weight: 700;
+    border-color: #fff;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
