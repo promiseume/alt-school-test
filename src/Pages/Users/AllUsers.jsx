@@ -4,6 +4,7 @@ import { Pagination } from "antd";
 import { Spin, Image } from "antd";
 import "antd/dist/antd.css";
 import './users.css'
+import ErrorBoundary from '../ErrorBoundary/error'
 
 export default function AllUsers() {
   const [users, setUsers] = useState();
@@ -25,6 +26,7 @@ export default function AllUsers() {
 
   return (
     <div className='container'>
+      <ErrorBoundary>
     <h1>View All Users</h1>
       {loading ? (
       <div className='loading-spinner'><Spin size={'large'}/></div>) : (
@@ -49,6 +51,7 @@ export default function AllUsers() {
         responsive
       />
       </div>
+      </ErrorBoundary>
     </div>
   );
 }

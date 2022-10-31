@@ -1,12 +1,14 @@
 import React from 'react'
 import './index.css'
-import notfound from '../../not-found.svg'
+import notFound from '../../not-found.svg'
 import { useNavigate } from "react-router"
+import ErrorBoundary from '../ErrorBoundary/error'
 
 export default function PageNotFound() {
   const navigate = useNavigate();
   return (
     <section className={'error-section container'}>
+        <ErrorBoundary>
     <div>
         <h3>Sorry the page you are looking for could&apos;nt be found</h3>
         <p>The page you are looking for does not exist.It might be removed or had it name changed.</p>
@@ -17,8 +19,9 @@ export default function PageNotFound() {
         </div>
     </div>
     <div className={'error'}>
-       <img src={notfound} alt={'notfound-img'}/>
+       <img src={notFound} alt={'notfound-img'}/>
     </div>
+        </ErrorBoundary>
 </section>     
   )
 }
